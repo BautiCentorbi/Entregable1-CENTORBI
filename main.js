@@ -58,4 +58,30 @@ function promediarRebotes() {
     }
 }
 
-promediarRebotes();
+// ASISTENCIAS
+let asistenciasPartido = [];
+
+function promediarAsistencias() {
+    for (let m = 0; m < partidosTotales; m++) {
+        for (let i = 0; i < cantidadJugadores; i++) {
+            asistenciasPartido[m] = asistenciasPartido[m] || [];
+            asistenciasPartido[m][i] = parseInt(prompt(`¿Cuántas asistencias hizo ${jugadoresTotales[i][0]} en el partido ${m + 1}?`));
+        }
+    }    
+    for (let i = 0; i < cantidadJugadores; i++) {
+        let totalAsistencias = 0;
+
+        for (let m = 0; m < partidosTotales; m++) {
+            totalAsistencias += asistenciasPartido[m][i];
+        }
+
+        const promedioAsistencias = totalAsistencias / partidosTotales
+        console.log(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioAsistencias} por partido`)
+        let usoSimulador = prompt("¿Deseas realizar otro cálculo? Si/No").toLowerCase()
+        if (usoSimulador !== "si"){
+            funcionamiento = false
+        }
+    }
+}
+
+promediarAsistencias()
