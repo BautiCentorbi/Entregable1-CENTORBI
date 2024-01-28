@@ -25,10 +25,6 @@ function promediarPuntos() {
 
         const promedioPuntos = totalPuntos / partidosTotales
         console.log(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioPuntos} por partido`)
-        let usoSimulador = prompt("¿Deseas realizar otro cálculo? Si/No").toLowerCase()
-        if (usoSimulador !== "si"){
-            funcionamiento = false
-        }
     }
 }
 
@@ -51,10 +47,6 @@ function promediarRebotes() {
 
         const promedioRebotes = totalRebotes / partidosTotales
         console.log(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioRebotes} por partido`)
-        let usoSimulador = prompt("¿Deseas realizar otro cálculo? Si/No").toLowerCase()
-        if (usoSimulador !== "si"){
-            funcionamiento = false
-        }
     }
 }
 
@@ -77,11 +69,29 @@ function promediarAsistencias() {
 
         const promedioAsistencias = totalAsistencias / partidosTotales
         console.log(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioAsistencias} por partido`)
-        let usoSimulador = prompt("¿Deseas realizar otro cálculo? Si/No").toLowerCase()
-        if (usoSimulador !== "si"){
-            funcionamiento = false
-        }
     }
 }
 
-promediarAsistencias()
+let funcionamiento = true
+
+while (funcionamiento == true) {
+    let decisionUsuario = parseInt(prompt("¿Qué estadística deseas calcular? Selecciona el número correspondiente a cada acción por favor:\n 1. Puntos\n 2. Rebotes\n 3. Asitencias\n 4. Salir"))
+    switch (decisionUsuario){
+        case 1:
+            promediarPuntos()
+            break;
+        case 2:
+            promediarRebotes()
+            break;
+        case 3:
+            promediarAsistencias()
+            break;
+        case 4:
+            funcionamiento = false
+            break;
+        default:
+            console.log(`Has ingresado un valor incorrecto, por favor intenta de nuevo`)
+            break;
+    }
+}
+
