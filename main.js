@@ -25,6 +25,10 @@ function promediarPuntos() {
 
         const promedioPuntos = totalPuntos / partidosTotales
         console.log(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioPuntos} por partido`)
+        let usoSimulador = prompt("¿Deseas realizar otro cálculo? Si/No").toLowerCase()
+        if (usoSimulador !== "si"){
+            funcionamiento = false
+        }
     }
 }
 
@@ -47,6 +51,10 @@ function promediarRebotes() {
 
         const promedioRebotes = totalRebotes / partidosTotales
         console.log(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioRebotes} por partido`)
+        let usoSimulador = prompt("¿Deseas realizar otro cálculo? Si/No").toLowerCase()
+        if (usoSimulador !== "si"){
+            funcionamiento = false
+        }
     }
 }
 
@@ -69,6 +77,10 @@ function promediarAsistencias() {
 
         const promedioAsistencias = totalAsistencias / partidosTotales
         console.log(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioAsistencias} por partido`)
+        let usoSimulador = prompt("¿Deseas realizar otro cálculo? Si/No").toLowerCase()
+        if (usoSimulador !== "si"){
+            funcionamiento = false
+        }
     }
 }
 
