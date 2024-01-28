@@ -24,7 +24,7 @@ function promediarPuntos() {
         }
 
         const promedioPuntos = totalPuntos / partidosTotales
-        console.log(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioPuntos} por partido`)
+        alert(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioPuntos} por partido`)
     }
 }
 
@@ -46,7 +46,7 @@ function promediarRebotes() {
         }
 
         const promedioRebotes = totalRebotes / partidosTotales
-        console.log(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioRebotes} por partido`)
+        alert(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioRebotes} por partido`)
     }
 }
 
@@ -68,7 +68,7 @@ function promediarAsistencias() {
         }
 
         const promedioAsistencias = totalAsistencias / partidosTotales
-        console.log(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioAsistencias} por partido`)
+        alert(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioAsistencias} por partido`)
     }
 }
 
@@ -90,13 +90,15 @@ while (funcionamiento == true) {
             funcionamiento = false
             break;
         default:
-            console.log(`Has ingresado un valor incorrecto, por favor intenta de nuevo`)
+            alert(`Has ingresado un valor incorrecto, por favor intenta de nuevo`)
             break;
     }
     if (funcionamiento) {
         let usoSimulador = prompt("¿Deseas realizar otro cálculo? Si/No").toLowerCase()
-        if (usoSimulador !== "si"){
+        if (usoSimulador == "no"){
             funcionamiento = false
+        } else if (usoSimulador !== ""){
+            alert("Has ingresado una opción incorrecta, por favor intenta de nuevo")
         }
     }
 }
