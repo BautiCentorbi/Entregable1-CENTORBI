@@ -32,4 +32,30 @@ function promediarPuntos() {
     }
 }
 
-promediarPuntos()
+// REBOTES
+let rebotesPartido = [];
+
+function promediarRebotes() {
+    for (let m = 0; m < partidosTotales; m++) {
+        for (let i = 0; i < cantidadJugadores; i++) {
+            rebotesPartido[m] = rebotesPartido[m] || [];
+            rebotesPartido[m][i] = parseInt(prompt(`¿Cuántos rebotes hizo ${jugadoresTotales[i][0]} en el partido ${m + 1}?`));
+        }
+    }  
+    for (let i = 0; i < cantidadJugadores; i++) {
+        let totalRebotes = 0;
+
+        for (let m = 0; m < partidosTotales; m++) {
+            totalRebotes += rebotesPartido[m][i];
+        }
+
+        const promedioRebotes = totalRebotes / partidosTotales
+        console.log(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioRebotes} por partido`)
+        let usoSimulador = prompt("¿Deseas realizar otro cálculo? Si/No").toLowerCase()
+        if (usoSimulador !== "si"){
+            funcionamiento = false
+        }
+    }
+}
+
+promediarRebotes();
