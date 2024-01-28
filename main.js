@@ -24,7 +24,7 @@ function promediarPuntos() {
         }
 
         const promedioPuntos = totalPuntos / partidosTotales
-        alert(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioPuntos} por partido`)
+        console.log(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioPuntos} por partido`)
     }
 }
 
@@ -46,7 +46,7 @@ function promediarRebotes() {
         }
 
         const promedioRebotes = totalRebotes / partidosTotales
-        alert(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioRebotes} por partido`)
+        console.log(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioRebotes} por partido`)
     }
 }
 
@@ -68,7 +68,7 @@ function promediarAsistencias() {
         }
 
         const promedioAsistencias = totalAsistencias / partidosTotales
-        alert(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioAsistencias} por partido`)
+        console.log(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioAsistencias} por partido`)
     }
 }
 
