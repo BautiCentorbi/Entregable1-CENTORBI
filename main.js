@@ -60,4 +60,3 @@ while (funcionamiento == true) {
         }
     }
 }
-
