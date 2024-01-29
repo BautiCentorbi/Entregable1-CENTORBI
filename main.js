@@ -26,7 +26,7 @@ function promediarEstadistica (estadistica, mensaje){
         }
 
         const promedioEstadistica = totalEstadistica / partidosTotales
-        console.log(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioEstadistica} ${mensaje} por partido`)
+        alert(`El jugador ${jugadoresTotales[i][0]} hizo un promedio de ${promedioEstadistica} ${mensaje} por partido`)
     }
 }
 
